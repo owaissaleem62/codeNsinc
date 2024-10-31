@@ -1,5 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Headers: Content-Type");
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get the form fields and remove whitespace.
@@ -46,7 +48,7 @@ header("Access-Control-Allow-Origin: *");
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
+            echo "Oops! You can reach us via Email or direct call if you encounter any errors.";
         }
 
     } else {

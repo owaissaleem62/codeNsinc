@@ -75,6 +75,39 @@ function parallax(e){
         }
     }
 });
+
+
+/*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+      contactMessage = document.getElementById('contact-message')
+
+const sendEmail = (e) =>{
+      e.preventDefault()
+      
+      // serviceID - templateID - #form - publicKey
+      emailjs.sendForm('service_sdblrbh','template_xfuhl8s','#contact-form','H1cm-Il8UZBQaoiTp')
+     
+      .then(() =>{
+
+      // Show sent message
+        contactMessage.textContent = 'Thank You! Your message has been sent ✅'
+
+   // Remove message after five seconds
+        setTimeout(()=>{
+            contactMessage.textContent = ''
+        }, 5000)
+
+        // clear input fields
+        contactForm.reset()
+
+      }, () =>{
+        //show error message
+        contactMessage.textContent = 'OOps, Message not sent ❌'
+      })
+}
+
+contactForm.addEventListener('submit', sendEmail)
+
 /*---------------------------
     WOW Activation
   -----------------------------------*/

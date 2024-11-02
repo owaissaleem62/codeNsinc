@@ -201,27 +201,27 @@
                     <!-- Contact Information End -->
                 </div>
                 <div class="col-lg-6 mb-30">
-                    <form id="contact-form" class="comment-form-inner contact-form wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".1s" action="POST">
+                    <form action="" id="contact-form" class="comment-form-inner contact-form wow fadeIn" data-wow-duration="1.5s" data-wow-delay=".1s">
                         <h2 class="title">Write A Message</h2>
                         <div class="row">
                             <div class="col-12 mb-3">
-                                <input placeholder="Your name" name="name" required>
+                                <input placeholder="Your name" name="user_name" id="name" required>
                             </div>
                             <div class="col-12 mb-3">
-                                <input type="email" placeholder="Your email" name="email" required>
+                                <input type="email" placeholder="Your email" name="user_email" id="email" required>
                             </div>
                             <div class="col-12 mb-3">
-                                <input placeholder="Your phone" name="phone" required>
+                                <input placeholder="Your phone" name="user_subject" id="subject" required>
                             </div>
                             <div class="col-12 mb-3">
-                                <textarea name="message" placeholder="Write your comment here" required></textarea>
+                                <textarea name="user_message" id="message" placeholder="Write your comment here" required></textarea>
                             </div>
                             <div class="col-12 text-left">
                                 <button class="btn btn-style-one" type="submit"> <span>Submit Now</span> </button>
                             </div>
                             <div class="col-12">
                                 <!--== Message Notification ==-->
-                                <div class="form-message mt-4"></div>
+                                <div class="form-message mt-4" id="contact-message"></div>
                             </div>
                         </div>
                     </form>
@@ -369,6 +369,10 @@
     <!-- Activation JS -->
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/pages/contact.js"></script>
+
+     <!--=============== EMAIL JS ===============-->
+     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 
 </body>
 

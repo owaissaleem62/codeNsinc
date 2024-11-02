@@ -13,7 +13,7 @@
       data: formData
     }).done(function(response) {
       // Make sure that the formMessages div has the 'success' class.
-      $(formMessages).removeClass('alert alert-danger');
+      $(formMessages).removeClass('alert alert-success');
       $(formMessages).addClass('alert alert-success fade show');
 
       // Set the message text.
@@ -24,8 +24,8 @@
       $('#contact-form input,#contact-form textarea').val('');
     }).fail(function(data) {
       // Make sure that the formMessages div has the 'error' class.
-      $(formMessages).removeClass('alert alert-success');
-      $(formMessages).addClass('alert alert-danger fade show');
+      // $(formMessages).removeClass('alert alert-success');
+      // $(formMessages).addClass('alert alert-danger fade show');
 
       // Set the message text.
       if (data.responseText === '') {
